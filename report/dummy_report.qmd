@@ -18,7 +18,7 @@ Hello World!
 ```{r}
 library(targets)
 tar_load(graphs)
-tar_load(analysis_results)
+tar_load(quarto_data)
 ```
 
 
@@ -28,5 +28,8 @@ tar_load(analysis_results)
 Lorem ipsum
 
 ## Results
+t-test res : $`r quarto_data$t_test_res`$
+
+Anova res : $`r quarto_data$anova_res`$
 
 

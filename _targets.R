@@ -28,7 +28,6 @@ source(here("src", "intro-target", "read_data.R"))
 source(here("src", "intro-target", "tidy_data.R"))
 source(here("src", "intro-target", "analysis.R"))
 source(here("src", "intro-target", "visualization.R"))
-source(here("src", "intro-target", "report.R"))
 
 # Replace the target list below with your own:
 list(
@@ -52,7 +51,11 @@ list(
      visualize()
   ),
   tar_quarto(
-    manuscript,
-    report
+    manuscript_plos,
+    here("report", "dummy.qmd")
+  ),
+  tar_quarto(
+    manuscript_word,
+    here("report", "dummy_report.qmd")
   )
 )

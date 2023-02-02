@@ -1,5 +1,5 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|69efd15344128fe7|||||||||||||||
+.Random.seed|object|87bbe07842c9fce9|||||||||||||||
 analyse_data|function|f1bef87c1df42bfe|||||||||||||||
 analysis_results|stem|1829fff50473b023|23f8142470f2f434|5aad89f35b7f7f36|-440385980||t19390.4610119904s|3f0d260b00af2958|61|rds|local|vector|||0||
 check_assumptions|function|f9e3b01b3140cfc0|||||||||||||||
@@ -7,6 +7,8 @@ check_data|function|7ab81cf0d0d27a53|||||||||||||||
 DATA|object|03978bfc6c34dd4f|||||||||||||||
 graphs|stem|23adecffa6850045|2b27f76b553b7f19|62457889349fcd8d|-877084551||t19390.4610122682s|316cc09d68060f29|67|rds|local|vector|||0||
 manuscript|stem|b34eed9ec83a5a37|8c563ba03ea4680f|bcd757bf23bccb29|615889701|report/dummy.pdf*report/dummy.qmd|t19390.5146823805s|a9cd7b881771cdf6|316338|file|local|vector|||8.63||
+manuscript_plos|stem|a77fcd5a33a22bb4|8c563ba03ea4680f|bcd757bf23bccb29|459564344|report/dummy.pdf*report/dummy.qmd|t19390.5301651121s|a9cd7b881771cdf6|316338|file|local|vector|||8.14||
+manuscript_word|stem|7c4a4b4e04542bc8|82fd380cef015a6b|bcd757bf23bccb29|970638788|report/dummy_report.docx*report/dummy_report.qmd|t19390.5302030881s|20958832795005f5|10411|file|local|vector|||3.18||
 parse_file|function|00e489cd6a36f08a|||||||||||||||
 parse_line|function|0f6702985d58ab11|||||||||||||||
 pretty_data|stem|33521df9e92bf6ee|38024b9686b8c476|6e4d0808f1b1dd72|-1048177218||t19390.4610116948s|bd589ebb56695fff|72|rds|local|vector|||0||

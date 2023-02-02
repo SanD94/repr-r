@@ -1,4 +1,5 @@
 # Start from here
+print("Hello World!")
 
 library(targets)
 tar_visnetwork()

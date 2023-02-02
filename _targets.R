@@ -5,12 +5,12 @@
 
 # Load packages required to define the pipeline:
 library(targets)
+library(tarchetypes) # Load other packages as needed. # nolint
 library(here)
-# library(tarchetypes) # Load other packages as needed. # nolint
 
 # Set target options:
 tar_option_set(
-  packages = c("tidyverse"), # packages that your targets need to run
+  packages = c("tidyverse", "rstatix"), # packages that your targets need to run
   format = "rds" # default storage format
   # Set other options as needed.
 )
@@ -28,7 +28,8 @@ source(here("src", "intro-target", "read_data.R"))
 source(here("src", "intro-target", "tidy_data.R"))
 source(here("src", "intro-target", "analysis.R"))
 source(here("src", "intro-target", "visualization.R"))
-source(here("src", "intro-target", "report.R"))
+source(here("src", "intro-quatro", "doc_utils.R"))
+source(here("src", "intro-quatro", "quarto_data.R"))
 
 # Replace the target list below with your own:
 list(
@@ -47,12 +48,21 @@ list(
       analyse_data()
   ),
   tar_target(
-    graphs,
-    pretty_data %>%
-     visualize() 
+    quarto_data,
+    analysis_results %>%
+      convert_quarto()
   ),
   tar_target(
-    manuscript,
-    report(analysis_results, graphs)
+    graphs,
+    pretty_data %>%
+     visualize()
+  ),
+  tar_quarto(
+    manuscript_plos,
+    here("report", "dummy.qmd")
+  ),
+  tar_quarto(
+    manuscript_word,
+    here("report", "dummy_report.qmd")
   )
 )

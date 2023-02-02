@@ -1,9 +1,9 @@
 tidy_data <- function(data) {
-  remove_extremes(data)
-  print("finished tidy data")
+  data <- remove_extremes(data)
+  data
 }
 
 
 remove_extremes <- function(data) {
-  print("remove extremes")
+  data
 }

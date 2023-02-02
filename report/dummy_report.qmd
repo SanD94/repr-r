@@ -1,0 +1,35 @@
+---
+date: "`r Sys.Date()`"
+author: Safa Andac
+title: Demo Report
+execute: 
+  echo: false
+  output: false
+format:
+  docx:
+    fig-width: 10
+    fig-height: 10
+    fig-dpi: 600
+---
+
+Hello World!
+
+
+```{r}
+library(targets)
+tar_load(graphs)
+tar_load(quarto_data)
+```
+
+
+
+## Abstract
+
+Lorem ipsum
+
+## Results
+t-test res : $`r quarto_data$t_test_res`$
+
+Anova res : $`r quarto_data$anova_res`$
+
+

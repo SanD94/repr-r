@@ -1,4 +1,1 @@
-report <- function(results, graphs) {
-  print(results)
-  print(graphs)
-}
+report <- here("report", "dummy.qmd")

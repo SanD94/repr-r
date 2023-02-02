@@ -1,8 +1,8 @@
 
-DATA <- here("data", "dummy_dummy_data.csv")
+DATA <- here("data", "mtcars.csv")
 
 read_data <- function(filename) {
-  elem <- parse_file(filename)
+  elem <- readr::read_csv(filename)
   check_data(elem)
   elem
 }

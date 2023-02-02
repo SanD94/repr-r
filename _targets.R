@@ -5,8 +5,8 @@
 
 # Load packages required to define the pipeline:
 library(targets)
+library(tarchetypes) # Load other packages as needed. # nolint
 library(here)
-# library(tarchetypes) # Load other packages as needed. # nolint
 
 # Set target options:
 tar_option_set(
@@ -49,10 +49,10 @@ list(
   tar_target(
     graphs,
     pretty_data %>%
-     visualize() 
+     visualize()
   ),
-  tar_target(
+  tar_quarto(
     manuscript,
-    report(analysis_results, graphs)
+    report
   )
 )
